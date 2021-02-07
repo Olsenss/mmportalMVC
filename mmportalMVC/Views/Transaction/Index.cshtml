@@ -7,66 +7,132 @@
     <div class="col-md-12">
         <div class="TimeLine">
             <div class="row bs-wizard" style="border-bottom:0;">
-                <div class="col-md-1 bs-wizard-step complete step-1">
+                <div class="col-md-3 bs-wizard-step complete step-1">
                     <div class="text-center bs-wizard-stepnum">1</div>
                     <div class="progress"><div class="progress-bar"></div></div>
                     <a href="#" class="bs-wizard-dot"></a>
-                    <div class="bs-wizard-info text-center">Opret</div>
+                    <div class="bs-wizard-info text-center">Opret handel</div>
                 </div>
 
                 <div class="col-md-3 bs-wizard-step disabled step-2">
-                    <!-- complete -->
                     <div class="text-center bs-wizard-stepnum">2</div>
-                    <div class="progress"><div class="progress-bar"></div></div>
-                    <a href="#" class="bs-wizard-dot"></a>
-                    <div class="bs-wizard-info text-center">Services</div>
-                </div>
-
-                <div class="col-md-3 bs-wizard-step disabled step-3">
-                    <!-- complete -->
-                    <div class="text-center bs-wizard-stepnum">3</div>
                     <div class="progress"><div class="progress-bar"></div></div>
                     <a href="#" class="bs-wizard-dot"></a>
                     <div class="bs-wizard-info text-center">Detaljer</div>
                 </div>
 
-                <div class="col-md-3 bs-wizard-step disabled step-4">
-                    <!-- active -->
-                    <div class="text-center bs-wizard-stepnum">4</div>
+                <div class="col-md-3 bs-wizard-step disabled step-3">
+                    <div class="text-center bs-wizard-stepnum">3</div>
                     <div class="progress"><div class="progress-bar"></div></div>
                     <a href="#" class="bs-wizard-dot"></a>
                     <div class="bs-wizard-info text-center">Bekræft</div>
                 </div>
-                <div class="col-md-1 bs-wizard-step disabled step-5">
-                    <!-- active -->
-                    <div class="text-center bs-wizard-stepnum">5</div>
+                <div class="col-md-3 bs-wizard-step disabled step-4">
+                    <div class="text-center bs-wizard-stepnum">4</div>
                     <div class="progress"><div class="progress-bar"></div></div>
                     <a href="#" class="bs-wizard-dot"></a>
                     <div class="bs-wizard-info text-center">Afslut</div>
                 </div>
             </div>
         </div>
-        <div class="step3 col-md-11">
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="inputDescription">Produkt, service beskrivelse</label>
-                    <input type="text" class="form-control" id="inputDescription" placeholder="F.eks. iPhone x 16gb, webshop, logo">
+        <div class="step1 col-md-11" style="display: block;">
+            <div class="form-row" style="padding-top:10px;">
+                <div class="form-group col-md-offset-5 col-md-7">
+                    <label class="row-header">Jeg er?</label>
+                    <div class="btn-group">
+                        <input type="radio" class="btn-check" name="who-am-i" id="who-am-i1" autocomplete="off" checked />
+                        <label class="btn btn-primary btn-lg" for="who-am-i1">Køber</label>
+
+                        <input type="radio" class="btn-check" name="who-am-i" id="who-am-i2" autocomplete="off" />
+                        <label class="btn btn-primary btn-lg" for="who-am-i2">Sælger</label>
+                    </div>
                 </div>
-                <div class="form-group col-md-6">
-                    <label for="inputEmail">Modpart</label>
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Indtast sælgers email for at sende en anmodning">
+                <div class="form-group col-md-offset-5 col-md-7">
+                    <label class="row-header">Hvem betaler?</label>
+                    <div class="btn-group">
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked />
+                        <label class="btn btn-primary btn-lg" for="option1">Køber</label>
+
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" />
+                        <label class="btn btn-primary btn-lg" for="option2">50/50</label>
+
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" />
+                        <label class="btn btn-primary btn-lg" for="option3">Sælger</label>
+                    </div>
                 </div>
             </div>
             <div class="form-row">
+                <div class="form-group col-md-offset-5 col-md-6 hidden-radio">
+                    <label class="row-header">Service plan</label>
+                    <p class="row-info">Vælg en plan som passer dig bedst</p>
+                    <label>
+                        <input type="radio" name="test" value="small" checked>
+                        <img class="resize-img" src="~/img/StandardAgreement.png">
+                    </label>
+                    <label>
+                        <input type="radio" name="test" value="big">
+                        <img class="resize-img" src="~/img/EkslusiveAgreement.jpg">
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="step2 col-md-11" style="display:none;">
+            <div class="form-row" style="padding-top:10px;">
                 <div class="form-group col-md-6">
-                    <label for="inputCategori">Vælg kategori</label>
-                    <input type="text" class="form-control" id="inputCategori" placeholder="Er varen brugt, ny eller defekt?">
+                    <label class="row-header" for="inputDescription">Produkt, service beskrivelse</label>
+                    <p class="row-info">Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.</p>
+                    <input type="text" class="form-control" id="inputDescription" placeholder="F.eks. iPhone x 16gb, webshop, logo">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="inputAmount">Det aftalte beløb i kroner</label>
+                    <label class="row-header" for="inputCategori">Vælg kategori</label>
+                    <p class="row-info">Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.</p>
+                    <input type="text" class="form-control" id="inputDescription" placeholder="F.eks. iPhone x 16gb, webshop, logo">
+                    @*<div class="dropdown">
+            <select>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+            </select>
+        </div>*@
+                </div>                
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label class="row-header" for="inputEmail">Modpartens email</label>
+                    <p class="row-info">Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien.</p>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Indtast modpartens email for at sende en anmodning">
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="row-header" for="inputCategori">Modpartens navn</label>
+                    <p class="row-info">Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien.</p>
+                    <input type="text" class="form-control" id="inputCategori" placeholder="Indtast modpartens navn">
+                </div>              
+                <div class="form-group col-md-6">
+                    <label class="row-header" for="inputAmount">Det aftalte beløb i kroner</label>
+                    <p class="row-info">Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien.</p>
                     <input type="number" class="form-control" id="inputAmount" placeholder="I DKK kr.">
                 </div>
-            </div>            
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-offset-4 col-md-8">
+                    <label class="row-header">Vælg pakkevægt?</label>
+                    <p class="row-info">Din makke må maks. veje 10kg</p>
+                    <div class="btn-group">
+                        <input type="radio" class="btn-check" name="weight-of-package" id="weight-of-package1" autocomplete="off" checked />
+                        <label class="btn btn-primary btn-lg" for="weight-of-package1">0 - 0,5 kg</label>
+
+                        <input type="radio" class="btn-check" name="weight-of-package" id="weight-of-package2" autocomplete="off" />
+                        <label class="btn btn-primary btn-lg" for="weight-of-package2">0,5 - 1 kg</label>
+
+                        <input type="radio" class="btn-check" name="weight-of-package" id="weight-of-package3" autocomplete="off" />
+                        <label class="btn btn-primary btn-lg" for="weight-of-package3">1 - 3 kg</label>
+
+                        <input type="radio" class="btn-check" name="weight-of-package" id="weight-of-package4" autocomplete="off" />
+                        <label class="btn btn-primary btn-lg" for="weight-of-package4">3 - 10 kg</label>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="footer col-md-12">
             <a class="btn btn-primary col-md-offset-1" href="#" style="visibility:hidden" id="step-back" role="button">< Tilbage</a>
@@ -106,9 +172,6 @@
             case 4:
                 changeToStep4();
                 break;
-            case 5:
-                changeToStep5();
-                break;
             default:
                 break;
         }
@@ -116,12 +179,20 @@
 
     function changeToStep1() {
         $("#step-back").css("visibility", "hidden");
+
+        $(".step1").css("display", "block");
+        $(".step2").css("display", "none");
+
         $(".step-2").toggleClass("complete");
-        $(".step-2").toggleClass("disabled");
+        $(".step-2").toggleClass("disabled");        
     }
 
     function changeToStep2() {
         $("#step-back").css("visibility", "visible");
+
+        $(".step1").css("display", "none");
+        $(".step2").css("display", "block");
+
         var step2toggle = $(".step-2").hasClass("disabled");
         if (step2toggle) {
             $(".step-2").toggleClass("complete");
@@ -135,36 +206,25 @@
     }
 
     function changeToStep3() {
+        $("#step-forward").text("Næste >");
         var step3toggle = $(".step-3").hasClass("disabled");
         if (step3toggle) {
             $(".step-3").toggleClass("complete");
             $(".step-3").toggleClass("disabled");
         }
-        var step4toggle = $(".step-4").hasClass("complete");
+        var step4toggle = $(".step-4").hasClass("active");
         if (step4toggle) {
-            $(".step-4").toggleClass("complete");
+            $(".step-4").toggleClass("active");
             $(".step-4").toggleClass("disabled");
         }
     }
+
     function changeToStep4() {
-        $("#step-forward").text("Næste >");
+        $("#step-forward").text("Afslut");
         var step4toggle = $(".step-4").hasClass("disabled");
         if (step4toggle) {
-            $(".step-4").toggleClass("complete");
+            $(".step-4").toggleClass("active");
             $(".step-4").toggleClass("disabled");
-        }
-        var step5toggle = $(".step-5").hasClass("active");
-        if (step5toggle) {
-            $(".step-5").toggleClass("active");
-            $(".step-5").toggleClass("disabled");
-        }
-    }
-    function changeToStep5() {
-        $("#step-forward").text("ByeBye");
-        var step5toggle = $(".step-5").hasClass("disabled");
-        if (step5toggle) {
-            $(".step-5").toggleClass("active");
-            $(".step-5").toggleClass("disabled");
         }
     }
 </script>
