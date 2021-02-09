@@ -77,3 +77,11 @@ C:\Users\Martin\source\repos\mmportalMVC\mmportalMVC\obj\Debug\mmportalMVC.cspro
 C:\Users\Martin\source\repos\mmportalMVC\mmportalMVC\obj\Debug\mmportalMVC.csproj.CopyComplete
 C:\Users\Martin\source\repos\mmportalMVC\mmportalMVC\obj\Debug\mmportalMVC.dll
 C:\Users\Martin\source\repos\mmportalMVC\mmportalMVC\obj\Debug\mmportalMVC.pdb
+C:\Users\Martin\source\repos\mmportalMVC\mmportalMVC\bin\Castle.Core.dll
+C:\Users\Martin\source\repos\mmportalMVC\mmportalMVC\bin\Castle.Windsor.dll
+C:\Users\Martin\source\repos\mmportalMVC\mmportalMVC\bin\EntityFramework.dll
+C:\Users\Martin\source\repos\mmportalMVC\mmportalMVC\bin\EntityFramework.SqlServer.dll
+C:\Users\Martin\source\repos\mmportalMVC\mmportalMVC\bin\Castle.Core.xml
+C:\Users\Martin\source\repos\mmportalMVC\mmportalMVC\bin\Castle.Windsor.xml
+C:\Users\Martin\source\repos\mmportalMVC\mmportalMVC\bin\EntityFramework.xml
+C:\Users\Martin\source\repos\mmportalMVC\mmportalMVC\bin\EntityFramework.SqlServer.xml
