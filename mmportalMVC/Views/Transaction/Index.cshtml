@@ -37,40 +37,40 @@
         </div>
         <div class="step1 col-md-11" style="display: block;">
             <div class="form-row" style="padding-top:10px;">
-                <div class="form-group col-md-offset-5 col-md-7">
+                <div class="form-group col-md-offset-4 col-md-7 hidden-radio">
                     <label class="row-header">Jeg er?</label>
                     <div class="btn-group">
-                        <input type="radio" class="btn-check" name="who-am-i" id="who-am-i1" autocomplete="off" checked />
+                        <input type="radio" class="btn-check" value="Køber" name="who-am-i" id="who-am-i1" autocomplete="off" checked />
                         <label class="btn btn-primary btn-lg" for="who-am-i1">Køber</label>
 
-                        <input type="radio" class="btn-check" name="who-am-i" id="who-am-i2" autocomplete="off" />
+                        <input type="radio" class="btn-check" value="Sælger" name="who-am-i" id="who-am-i2" autocomplete="off" />
                         <label class="btn btn-primary btn-lg" for="who-am-i2">Sælger</label>
                     </div>
                 </div>
-                <div class="form-group col-md-offset-5 col-md-7">
+                <div class="form-group col-md-offset-4 col-md-7 hidden-radio">
                     <label class="row-header">Hvem betaler?</label>
                     <div class="btn-group">
-                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked />
+                        <input type="radio" class="btn-check" value="Køber" name="options" id="option1" autocomplete="off" checked />
                         <label class="btn btn-primary btn-lg" for="option1">Køber</label>
 
-                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" />
+                        <input type="radio" class="btn-check" value="50/50" name="options" id="option2" autocomplete="off" />
                         <label class="btn btn-primary btn-lg" for="option2">50/50</label>
 
-                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" />
+                        <input type="radio" class="btn-check" value="Sælger" name="options" id="option3" autocomplete="off" />
                         <label class="btn btn-primary btn-lg" for="option3">Sælger</label>
                     </div>
                 </div>
             </div>
             <div class="form-row">
-                <div class="form-group col-md-offset-5 col-md-6 hidden-radio">
+                <div class="form-group col-md-offset-4 col-md-6 hidden-radio">
                     <label class="row-header">Service plan</label>
                     <p class="row-info">Vælg en plan som passer dig bedst</p>
                     <label>
-                        <input type="radio" name="test" value="small" checked>
+                        <input type="radio" name="service-plan" value="Standard Agreement" checked>
                         <img class="resize-img" src="~/img/StandardAgreement.png">
                     </label>
                     <label>
-                        <input type="radio" name="test" value="big">
+                        <input type="radio" name="service-plan" value="Ekslusive Agreement">
                         <img class="resize-img" src="~/img/EkslusiveAgreement.jpg">
                     </label>
                 </div>
@@ -86,7 +86,7 @@
                 <div class="form-group col-md-6">
                     <label class="row-header" for="inputCategori">Vælg kategori</label>
                     <p class="row-info">Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.</p>
-                    <input type="text" class="form-control" id="inputDescription" placeholder="F.eks. iPhone x 16gb, webshop, logo">
+                    <input type="text" class="form-control" id="inputCategori" placeholder="F.eks. iPhone x 16gb, webshop, logo">
                 </div>
             </div>
             <div class="form-row">
@@ -96,9 +96,9 @@
                     <input type="email" class="form-control" id="inputEmail" placeholder="Indtast modpartens email for at sende en anmodning">
                 </div>
                 <div class="form-group col-md-6">
-                    <label class="row-header" for="inputCategori">Modpartens navn</label>
+                    <label class="row-header" for="inputName">Modpartens navn</label>
                     <p class="row-info">Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien.</p>
-                    <input type="text" class="form-control" id="inputCategori" placeholder="Indtast modpartens navn">
+                    <input type="text" class="form-control" id="inputName" placeholder="Indtast modpartens navn">
                 </div>
                 <div class="form-group col-md-6">
                     <label class="row-header" for="inputAmount">Det aftalte beløb i kroner</label>
@@ -107,47 +107,110 @@
                 </div>
             </div>
             <div class="form-row">
-                <div class="form-group col-md-offset-4 col-md-8">
+                <div class="form-group col-md-offset-4 col-md-8 hidden-radio">
                     <label class="row-header">Vælg pakkevægt?</label>
                     <p class="row-info">Din makke må maks. veje 10kg</p>
                     <div class="btn-group">
-                        <input type="radio" class="btn-check" name="weight-of-package" id="weight-of-package1" autocomplete="off" checked />
+                        <input type="radio" class="btn-check" value="0 - 0,5 kg" name="weight-of-package" id="weight-of-package1" autocomplete="off" checked />
                         <label class="btn btn-primary btn-lg" for="weight-of-package1">0 - 0,5 kg</label>
 
-                        <input type="radio" class="btn-check" name="weight-of-package" id="weight-of-package2" autocomplete="off" />
+                        <input type="radio" class="btn-check" value="0,5 - 1 kg" name="weight-of-package" id="weight-of-package2" autocomplete="off" />
                         <label class="btn btn-primary btn-lg" for="weight-of-package2">0,5 - 1 kg</label>
 
-                        <input type="radio" class="btn-check" name="weight-of-package" id="weight-of-package3" autocomplete="off" />
+                        <input type="radio" class="btn-check" value="1 - 3 kg" name="weight-of-package" id="weight-of-package3" autocomplete="off" />
                         <label class="btn btn-primary btn-lg" for="weight-of-package3">1 - 3 kg</label>
 
-                        <input type="radio" class="btn-check" name="weight-of-package" id="weight-of-package4" autocomplete="off" />
+                        <input type="radio" class="btn-check" value="3 - 10 kg" name="weight-of-package" id="weight-of-package4" autocomplete="off" />
                         <label class="btn btn-primary btn-lg" for="weight-of-package4">3 - 10 kg</label>
                     </div>
                 </div>
             </div>
         </div>
         <div class="step3 col-md-11" style="display:none;">
-            <span class="text-center"><h1 style="color:black;">Afslut handel</h1></span>
-            <div class="col-md-12">
-                <span><h2 style="color: black;">Service gebyr 670 kr</h2></span>
-                <br />
-                <span><h2 style="color: black;">Total pris 7370 kr</h2></span>
-            </div>
-            <span class="text-center"><h1 style="color: black;">Betal med</h1></span>
-            <div class="form-group col-md-12 text-center">
-                <div class="btn-group">
-                    <input type="radio" class="btn-check" name="payment" id="mobilepay" autocomplete="off" checked />
-                    <label class="btn btn-primary btn-lg payment-image-button" for="mobilepay"><img src="~/img/mp.png" class="payment-images" /></label>
-
-                    <input type="radio" class="btn-check" name="payment" id="visa" autocomplete="off" />
-                    <label class="btn btn-primary btn-lg payment-image-button" for="visa"> <img src="~/img/visa.jpg" class="payment-images"></label>
+            <h1 class="text-center" style="color:black;">Afslut handel</h1>
+            <div class="col-md-12 service-info">
+                <div class="form-row paddings" style="border-bottom-style:dashed;border-bottom-color:#084E8F;">
+                    <div class="col-md-6">
+                        <label style="color: black;">Service </label>
+                        <label style="color: #084E8F;">gebyr</label>
+                    </div>
+                    <div class="col-md-6">
+                        <label id="service-salary-amount" style="color: black;">0 kr.</label>
+                    </div>
+                </div>
+                <div class="form-row paddings">
+                    <div class="col-md-6">
+                        <label style="color: #084E8F;">Total </label>
+                        <label style="color: black;">pris</label>
+                    </div>
+                    <div class="col-md-6">
+                        <label id="total-salary-amount" style="color: black;">0 kr.</label>
+                    </div>
                 </div>
             </div>
-            <div class="footer col-md-12">
-                <a class="btn btn-primary col-md-offset-1" href="#" style="visibility:hidden" id="step-back" role="button">< Tilbage</a>
-                <a class="btn btn-primary col-md-offset-8" href="#" id="step-forward" role="button">Næste ></a>
-            </div>
+            <h1 style="color: black;" class="text-center">Betal med</h1>
+            <div class="form-group col-md-12 text-center hidden-radio">
+                <div class="btn-group">                    
+                    <label class="btn btn-primary btn-lg payment-image-button">
+                        <input type="radio" name="payment" checked />
+                        <img src="~/img/mp.png" class="payment-images" />
+                    </label>
 
+                    
+                    <label class="btn btn-primary btn-lg payment-image-button">
+                        <input type="radio" name="payment" />
+                        <img src="~/img/visa.jpg" style="padding: 2px 0px;" class="payment-images">
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="step4 col-md-11" style="display:none;">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label class="row-header">Jeg er:</label>
+                    <p class="row-info" id="who-am-i-pgh"></p>
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="row-header">Hvem betaler:</label>
+                    <p class="row-info" id="who-pays-pgh"></p>
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="row-header">Service plan:</label>
+                    <p class="row-info" id="service-plan-pgh"></p>
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="row-header" for="inputDescription">Produkt, service beskrivelse:</label>
+                    <p class="row-info" id="inputDescription-pgh"></p>
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="row-header">Kategori:</label>
+                    <p class="row-info" id="inputCategori-pgh"></p>
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="row-header">Modpartens email:</label>
+                    <p class="row-info" id="inputEmail-pgh"></p>
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="row-header">Modpartens navn:</label>
+                    <p class="row-info" id="inputName-pgh"></p>
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="row-header">Pakkevægt:</label>
+                    <p class="row-info" id="weight-of-package-pgh"></p>
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="row-header">Det aftalte beløb:</label>
+                    <p class="row-info" id="inputAmount-pgh"></p>
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="row-header">Fulde beløb inkl. gebyr: </label>
+                    <p class="row-info" id="inputAmountWithFee-pgh"></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer col-md-12">
+            <a class="btn btn-primary col-md-offset-1" href="#" style="visibility:hidden" id="step-back" role="button">< Tilbage</a>
+            <a class="btn btn-primary col-md-offset-8" href="#" id="step-forward" role="button">Næste ></a>
         </div>
 </main>
 
@@ -156,9 +219,9 @@
     var currentStep = 1;
 
     $(document).ready(function () {
-        $(".step1").css("display", "none");
-        $(".step2").css("display", "none");
-        $(".step3").css("display", "block");
+        //$(".step1").css("display", "none");
+        //$(".step2").css("display", "none");
+        //$(".step3").css("display", "block");
         $("#step-forward").click(function () {
             currentStep++;
             changeStep();
@@ -192,12 +255,12 @@
     function changeToStep1() {
         $("#step-back").css("visibility", "hidden");
 
-        //$(".step1").css("display", "block");
-        //$(".step2").css("display", "none");
+        $(".step1").css("display", "block");
+        $(".step2").css("display", "none");
 
 
         $(".step-2").toggleClass("complete");
-        $(".step-2").toggleClass("disabled");        
+        $(".step-2").toggleClass("disabled");
     }
 
     function changeToStep2() {
@@ -224,6 +287,7 @@
 
         $(".step2").css("display", "none");
         $(".step3").css("display", "block");
+        $(".step4").css("display", "none");
         $("#step-forward").text("Næste >");
         var step3toggle = $(".step-3").hasClass("disabled");
         if (step3toggle) {
@@ -235,15 +299,64 @@
             $(".step-4").toggleClass("active");
             $(".step-4").toggleClass("disabled");
         }
+        calculateServicePrice();
     }
 
     function changeToStep4() {
         $("#step-forward").text("Afslut");
+        $(".step3").css("display", "none");
+        $(".step4").css("display", "block");
         var step4toggle = $(".step-4").hasClass("disabled");
         if (step4toggle) {
             $(".step-4").toggleClass("active");
             $(".step-4").toggleClass("disabled");
         }
+        prepareStep4();
+    }
+    function prepareStep4() {
+        $("#who-am-i-pgh").text($('input[name="who-am-i"]:checked').val());
+        $("#who-pays-pgh").text($('input[name="options"]:checked').val());
+        $("#service-plan-pgh").text($('input[name="service-plan"]:checked').val());        
+        $("#weight-of-package-pgh").text($('input[name="weight-of-package"]:checked').val());        
+        
+        $("#inputDescription-pgh").text($("#inputDescription").val());
+        $("#inputCategori-pgh").text($("#inputCategori").val());
+        $("#inputEmail-pgh").text($("#inputEmail").val());
+        $("#inputName-pgh").text($("#inputName").val());
+        $("#inputAmount-pgh").text($("#inputAmount").val() + " kr.");
+        $("#inputAmountWithFee-pgh").text($("#total-salary-amount").text());
+
+
+        //eks
+        //$("#who-am-i-pgh").val($("#companyNameLabel").html());
+    }
+
+    function calculateServicePrice() {
+        var service = $('input[name="service-plan"]:checked').val();
+        var serviceAmount = 0;
+        var totalAmount = 0;
+        var amount = $("#inputAmount").val();
+        if (service.includes("Standard")) {
+            if (amount > 299) {
+                serviceAmount = amount / 10;                
+            }
+            else {
+                serviceAmount = 299;                
+            }
+            totalAmount = parseInt(amount) + parseInt(serviceAmount);
+        }
+        else {
+            if (amount > 599) {
+                serviceAmount = amount / 4;
+            }
+            else {
+                serviceAmount = 599;
+            }
+            totalAmount = parseInt(amount) + parseInt(serviceAmount);
+        }
+
+        $("#service-salary-amount").text(serviceAmount + " kr.");
+        $("#total-salary-amount").text(totalAmount + " kr.");        
     }
 </script>
 

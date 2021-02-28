@@ -5,7 +5,9 @@
 .form-row label.row-header {
     display: block;
 }
-
+.row-header{
+    font-size:18px;
+}
 .form-group label.row-header, .row-info {
     color: #595959;
 }
@@ -57,13 +59,23 @@ input[type='radio'] {
     }
 
     /* CHECKED STYLES */
-[type=radio]:checked + img {
+.step1 [type=radio]:checked + img {
     outline: 2px solid #084E8F;
 }
+[type=radio]:checked + label {
+    background-color: #286090;
+    border-color: #204d74;
+}
+.step3 [type=radio]:checked + img {
+    border: 2px solid #084E8F;
+}
+.btn-primary:active {
+    box-shadow: none;
+}
+
 /*
  * Sidebar
  */
-
 .sidebar {
     position: fixed;
     top: 0;
@@ -133,7 +145,17 @@ input[type='radio'] {
 /*
  * Navbar
  */
+.step4 label {
 
+    text-align: right;
+    clear: both;
+    float: left;
+    margin-right: 5px;
+}
+.step4 p {
+    font-size: 16px;
+    padding-top: 2px;
+}
 .navbar-brand {
     padding-top: .75rem;
     padding-bottom: .75rem;
@@ -167,7 +189,16 @@ input[type='radio'] {
 .dashboard {
     background-color: #084E8F !important;
 }
-
+.service-info .paddings label{
+    font-size:24px;
+}
+.paddings {
+    padding: 5px 0px;
+}
+.service-info {
+    border: #084E8F solid 2px;
+    background-color: lightgrey;
+}
 
 .bs-wizard {
     margin-top: 40px;
@@ -179,7 +210,6 @@ input[type='radio'] {
 .payment-images {
     max-height: 6em;
     max-width: 100%;
-    border: 1px solid rgba(0, 0, 0, .25);
     padding: 0.01em 16px;
     border-radius: 16px;
     padding-left: 1em;
