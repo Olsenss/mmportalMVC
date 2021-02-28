@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<main class="ms-sm-auto col-md-10">
+<main class="ms-sm-auto col-md-10" style="margin-left: 22%;">
     <div class="col-md-12">
         <div class="TimeLine">
             <div class="row bs-wizard" style="border-bottom:0;">
@@ -87,15 +87,7 @@
                     <label class="row-header" for="inputCategori">Vælg kategori</label>
                     <p class="row-info">Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. Sætningen blev gjordt kendt i 1960'erne med lanceringen af Letraset-ark, som indeholdt afsnit med Lorem Ipsum, og senere med layoutprogrammer som Aldus PageMaker, som også indeholdt en udgave af Lorem Ipsum.</p>
                     <input type="text" class="form-control" id="inputDescription" placeholder="F.eks. iPhone x 16gb, webshop, logo">
-                    @*<div class="dropdown">
-            <select>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
-            </select>
-        </div>*@
-                </div>                
+                </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -107,7 +99,7 @@
                     <label class="row-header" for="inputCategori">Modpartens navn</label>
                     <p class="row-info">Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien.</p>
                     <input type="text" class="form-control" id="inputCategori" placeholder="Indtast modpartens navn">
-                </div>              
+                </div>
                 <div class="form-group col-md-6">
                     <label class="row-header" for="inputAmount">Det aftalte beløb i kroner</label>
                     <p class="row-info">Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien.</p>
@@ -134,12 +126,29 @@
                 </div>
             </div>
         </div>
-        <div class="footer col-md-12">
-            <a class="btn btn-primary col-md-offset-1" href="#" style="visibility:hidden" id="step-back" role="button">< Tilbage</a>
-            <a class="btn btn-primary col-md-offset-8" href="#" id="step-forward" role="button">Næste ></a>
-        </div>
+        <div class="step3 col-md-11" style="display:none;">
+            <span class="text-center"><h1 style="color:black;">Afslut handel</h1></span>
+            <div class="col-md-12">
+                <span><h2 style="color: black;">Service gebyr 670 kr</h2></span>
+                <br />
+                <span><h2 style="color: black;">Total pris 7370 kr</h2></span>
+            </div>
+            <span class="text-center"><h1 style="color: black;">Betal med</h1></span>
+            <div class="form-group col-md-12 text-center">
+                <div class="btn-group">
+                    <input type="radio" class="btn-check" name="payment" id="mobilepay" autocomplete="off" checked />
+                    <label class="btn btn-primary btn-lg payment-image-button" for="mobilepay"><img src="~/img/mp.png" class="payment-images" /></label>
 
-    </div>
+                    <input type="radio" class="btn-check" name="payment" id="visa" autocomplete="off" />
+                    <label class="btn btn-primary btn-lg payment-image-button" for="visa"> <img src="~/img/visa.jpg" class="payment-images"></label>
+                </div>
+            </div>
+            <div class="footer col-md-12">
+                <a class="btn btn-primary col-md-offset-1" href="#" style="visibility:hidden" id="step-back" role="button">< Tilbage</a>
+                <a class="btn btn-primary col-md-offset-8" href="#" id="step-forward" role="button">Næste ></a>
+            </div>
+
+        </div>
 </main>
 
 @Scripts.Render("~/bundles/jquery")
@@ -147,6 +156,9 @@
     var currentStep = 1;
 
     $(document).ready(function () {
+        $(".step1").css("display", "none");
+        $(".step2").css("display", "none");
+        $(".step3").css("display", "block");
         $("#step-forward").click(function () {
             currentStep++;
             changeStep();
@@ -180,8 +192,9 @@
     function changeToStep1() {
         $("#step-back").css("visibility", "hidden");
 
-        $(".step1").css("display", "block");
-        $(".step2").css("display", "none");
+        //$(".step1").css("display", "block");
+        //$(".step2").css("display", "none");
+
 
         $(".step-2").toggleClass("complete");
         $(".step-2").toggleClass("disabled");        
@@ -192,6 +205,8 @@
 
         $(".step1").css("display", "none");
         $(".step2").css("display", "block");
+        $(".step3").css("display", "none");
+
 
         var step2toggle = $(".step-2").hasClass("disabled");
         if (step2toggle) {
@@ -206,6 +221,9 @@
     }
 
     function changeToStep3() {
+
+        $(".step2").css("display", "none");
+        $(".step3").css("display", "block");
         $("#step-forward").text("Næste >");
         var step3toggle = $(".step-3").hasClass("disabled");
         if (step3toggle) {

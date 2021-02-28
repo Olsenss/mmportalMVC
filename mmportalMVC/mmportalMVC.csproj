@@ -143,7 +143,9 @@
     <Content Include="img\Blue_Logo Transparent.jpg" />
     <Content Include="img\Dollarblob.jpg" />
     <Content Include="img\EkslusiveAgreement.jpg" />
+    <Content Include="img\mp.png" />
     <Content Include="img\StandardAgreement.png" />
+    <Content Include="img\visa.jpg" />
     <Content Include="img\White_Logo Transparent.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
