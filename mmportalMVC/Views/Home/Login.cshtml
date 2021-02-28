@@ -3,30 +3,47 @@
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="row justify-content-md-center">
-    <div class="col-md-4">
-        <div class="card">
-            <div class="card-header">
-                Login
-            </div>
-            <div class="card-body">
-                @using (Html.BeginForm("Login", "Home", FormMethod.Post))
-                {
-                    @Html.AntiForgeryToken()
-                    <div class="form-group">
-                        @Html.LabelFor(m => m.Email)
-                        @Html.TextBoxFor(m => m.Email, "", new { @class = "form-control", @placeholder = "Email" })
 
-                    </div>
-                    <div class="form-group">
-                        @Html.LabelFor(m => m.Password)
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" name="submit" class="btn btn-primary" value="Login" />
-                    </div>
-                }
+<script type="text/x-nemid" id="nemid_parameters">
+    @*{
+    "PARAMS_DIGEST": "IrMABs5P+9NYTusg+QPCC9daBXNsxaHLzp9GpkRoolY=",
+    "DIGEST_SIGNATURE": "uTK1EhfxS/UVuHF7V8KunCJBA3gxm9cZtMKVriRHpvXZKWYOcmZtuWByZMLpLWt45/6yW7WeVlIVEFvc6TXIROLiU7zQDhoGYCx2drq09bPkxk2HbcWXKDEVIB9CgcCuzpXiHFjYCj7cbeoPvFCAAIETJ47rLUP+rmnyIQCZk5lPdtNSISYYeKEhFrIJL3O1WtzwJiFporTDiT/BR75R0eLn4F2YKJPOb/8+Yykevuq5OwGNWR6XWbIf3kPXKffefjNl63UIoYKtHeUgygDTohlot6yzRxvlAsWQQ9IIQTQloJEBqscmdPRyLVGRMC8ZKHTOxctinucwM7EvsZ1Akg==",
+    "clientflow": "banklogin1",
+    "SAML_REQUEST": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHNwOkF1dGhuUmVxdWVzdCB4bWxuczpzcD0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOnByb3RvY29sIiBJRD0iUmVxdWVzdC0xMjM0NSIgSXNzdWVJbnN0YW50PSIyMDIxLTAyLTEwVDE0OjM2OjM3LjYzOVoiIFZlcnNpb249IjIuMCI+CjxzOklzc3VlciB4bWxuczpzPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YXNzZXJ0aW9uIj40OTwvczpJc3N1ZXI+PGRzOlNpZ25hdHVyZSB4bWxuczpkcz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS94bWxkc2lnIyI+CjxkczpTaWduZWRJbmZvIHhtbG5zOmRzPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5L3htbGRzaWcjIj4KPGRzOkNhbm9uaWNhbGl6YXRpb25NZXRob2QgQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzEwL3htbC1leGMtYzE0biMiPjwvZHM6Q2Fub25pY2FsaXphdGlvbk1ldGhvZD4KPGRzOlNpZ25hdHVyZU1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMDQveG1sZHNpZy1tb3JlI3JzYS1zaGEyNTYiPjwvZHM6U2lnbmF0dXJlTWV0aG9kPgo8ZHM6UmVmZXJlbmNlIFVSST0iI1JlcXVlc3QtMTIzNDUiPgo8ZHM6VHJhbnNmb3Jtcz4KPGRzOlRyYW5zZm9ybSBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyNlbnZlbG9wZWQtc2lnbmF0dXJlIj48L2RzOlRyYW5zZm9ybT48ZHM6VHJhbnNmb3JtIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8xMC94bWwtZXhjLWMxNG4jIj48ZWM6SW5jbHVzaXZlTmFtZXNwYWNlcyB4bWxuczplYz0iaHR0cDovL3d3dy53My5vcmcvMjAwMS8xMC94bWwtZXhjLWMxNG4jIiBQcmVmaXhMaXN0PSJkcyBzIHNwIj48L2VjOkluY2x1c2l2ZU5hbWVzcGFjZXM+PC9kczpUcmFuc2Zvcm0+CjwvZHM6VHJhbnNmb3Jtcz4KPGRzOkRpZ2VzdE1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvMDQveG1sZW5jI3NoYTI1NiI+PC9kczpEaWdlc3RNZXRob2Q+PGRzOkRpZ2VzdFZhbHVlPkx4UkdJeEtTRHpwSWJvQ29vWFVDenZFOHlVelRkSS9VRGQyMTFEck1Nd1E9PC9kczpEaWdlc3RWYWx1ZT4KPC9kczpSZWZlcmVuY2U+CjwvZHM6U2lnbmVkSW5mbz48ZHM6U2lnbmF0dXJlVmFsdWU+CmlvWnUzSnNZVWxHTUxhd1B2MWRvajRtTVNVU0lXblp5YTZISUxBVzFyMkp5RlYyVWs3WUx6UVhSbkh3clJ4QmdRRU00VEhhU3NPUUg0WUlqWGhSbVpZUHE4V2NkYTZrbDN3WDAxcXQ0V1lvK1o3RTlBcUc1ditZcUdVTXRIL0xTSXozRHJNM0RMTVowcXhZMlB0TGdTVnBNYXJaaFZRNGY0ait6TGNxc1hJV0VvQ1dYa2gyNGZkcmlqYXQ1ZHlSOXQya0FuVkRUSWJnQVQwR1psZ0xDMm5ndnAwUG9Yam1NdW5WanM2RWxBUUhIR2wyeDh0WTVEUGcyOGJhK1pBRVhPR3JXWHVKUWtmc3pSeEpDNXBiZzh5QTNZWVI4Q3BWMkNOUVFuUWpFVk54dnZPakJvZDJzNDNmVFBsU2FWa0F3dE1wY1lXSGE3U05jbVFiSHZJSXFEZz09PC9kczpTaWduYXR1cmVWYWx1ZT4KPC9kczpTaWduYXR1cmU+PC9zcDpBdXRoblJlcXVlc3Q+",
+    "ORIGIN": "https://appletk.danid.dk"
+    }*@
+</script>
+
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+    <iframe id="nemid_iframe" title="NemID" scrolling="no" frameborder="0" style="width:500px;height:450px;border:0" src=""></iframe>
+
+
+    <div class="row justify-content-md-center">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    Login
+                </div>
+                <div class="card-body">
+                    @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Email)
+                            @Html.TextBoxFor(m => m.Email, "", new { @class = "form-control", @placeholder = "Email" })
+
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Password)
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="submit" class="btn btn-primary" value="Login" />
+                        </div>
+                    }
+                </div>
             </div>
         </div>
     </div>
-</div>
+</main>
