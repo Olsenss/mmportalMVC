@@ -3,14 +3,75 @@
     font-family: 'Lato', sans-serif;
 }
 
+.form-row label.row-header {
+    display: block;
+}
+.row-header{
+    font-size:18px;
+}
+.form-group label.row-header, .row-info {
+    color: #595959;
+}
+
 * {
     -webkit-font-smoothing: antialiased;
+}
+.footer{
+    padding-top:10px;
+}
+
+.step1, .step2, .step3, .step4 {
+    border: #337ab7;
+    border-style: dotted;
+    border-width: thin;
 }
 
 .feather {
     width: 24px;
     height: 24px;
     vertical-align: text-bottom;
+}
+.TimeLine{
+    padding-bottom:30px;
+}
+
+    img.resize-img
+
+{
+    max-width: 250px;
+    max-height: 400px;
+}
+}
+
+input[type='radio'] {
+    transform: scale(10);
+}
+/* HIDE RADIO */
+.hidden-radio [type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;    
+}
+
+    /* IMAGE STYLES */
+    [type=radio] + img {
+        cursor: pointer;
+    }
+
+    /* CHECKED STYLES */
+.step1 [type=radio]:checked + img {
+    outline: 2px solid #084E8F;
+}
+[type=radio]:checked + label {
+    background-color: #286090;
+    border-color: #204d74;
+}
+.step3 [type=radio]:checked + img {
+    border: 2px solid #084E8F;
+}
+.btn-primary:active {
+    box-shadow: none;
 }
 
 .clearfix > div:last-of-type {
@@ -48,6 +109,7 @@
 .last-item-right {
     margin-left:auto;
 }
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -58,7 +120,7 @@
     /* rtl:remove */
     left: 0;
     z-index: 100; /* Behind the navbar */
-    padding: 48px 0 0; /* Height of navbar */
+    padding: 48px 10px 0 10px; /* Height of navbar */
     box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
     background-color: #084E8F !important;
 }
@@ -239,6 +301,175 @@
         line-height: 20px;
         float: left;
     }
+.step4 label {
+
+    text-align: right;
+    clear: both;
+    float: left;
+    margin-right: 5px;
+}
+.step4 p {
+    font-size: 16px;
+    padding-top: 2px;
+}
+.navbar-brand {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, .25);
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.navbar .navbar-toggler {
+    top: .25rem;
+    right: 1rem;
+}
+
+.navbar .form-control {
+    padding: .75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+}
+
+.form-control-dark {
+    color: #fff;
+    background-color: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+}
+
+    .form-control-dark:focus {
+        border-color: transparent;
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+    }
+
+.dashboard {
+    background-color: #084E8F !important;
+}
+.service-info .paddings label{
+    font-size:24px;
+}
+.paddings {
+    padding: 5px 0px;
+}
+.service-info {
+    border: #084E8F solid 2px;
+    background-color: lightgrey;
+}
+
+.bs-wizard {
+    margin-top: 40px;
+}
+.payment-image-button {
+  background-color: white !important;
+  border: white !important;
+}
+.payment-images {
+    max-height: 6em;
+    max-width: 100%;
+    padding: 0.01em 16px;
+    border-radius: 16px;
+    padding-left: 1em;
+}
+/*Form Wizard*/
+.bs-wizard {
+    border-bottom: solid 1px #e0e0e0;
+    padding: 0 0 10px 0;
+}
+
+    .bs-wizard > .bs-wizard-step {
+        padding: 0;
+        position: relative;
+    }
+
+        .bs-wizard > .bs-wizard-step + .bs-wizard-step {
+        }
+
+        .bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
+            color: #595959;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .bs-wizard > .bs-wizard-step .bs-wizard-info {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .bs-wizard > .bs-wizard-step > .bs-wizard-dot {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            display: block;
+            background: #084E8F;
+            top: 45px;
+            left: 50%;
+            margin-top: -15px;
+            margin-left: -15px;
+            border-radius: 50%;
+        }
+
+            .bs-wizard > .bs-wizard-step > .bs-wizard-dot:after {
+                content: ' ';
+                width: 14px;
+                height: 14px;
+                background: #084E8F;
+                border-radius: 50px;
+                position: absolute;
+                top: 8px;
+                left: 8px;
+            }
+
+        .bs-wizard > .bs-wizard-step > .progress {
+            position: relative;
+            border-radius: 0px;
+            height: 8px;
+            box-shadow: none;
+            margin: 20px 0;
+        }
+
+            .bs-wizard > .bs-wizard-step > .progress > .progress-bar {
+                width: 0px;
+                box-shadow: none;
+                background: #52A5DA;
+            }
+
+        .bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {
+            width: 100%;
+        }
+
+        .bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {
+            width: 50%;
+        }
+
+        .bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {
+            width: 0%;
+        }
+
+        .bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {
+            width: 100%;
+        }
+
+        .bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {
+            background-color: #f5f5f5;
+        }
+
+            .bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {
+                opacity: 0;
+            }
+
+        .bs-wizard > .bs-wizard-step:first-child > .progress {
+            left: 50%;
+            width: 50%;
+        }
+
+        .bs-wizard > .bs-wizard-step:last-child > .progress {
+            width: 50%;
+        }
+
+        .bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot {
+            pointer-events: none;
+        }
+
 
         .timeline-panel:after {
             content: '';

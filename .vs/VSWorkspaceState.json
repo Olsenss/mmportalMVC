@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\mmportalMVC"
+    "\\mmportalMVC",
+    "\\mmportalMVC\\Views"
   ],
   "SelectedNode": "\\mmportalMVC",
   "PreviewInSolutionExplorer": false
