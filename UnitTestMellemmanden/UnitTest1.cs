@@ -8,7 +8,7 @@ namespace UnitTestMellemmanden
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void SendEmailTest()
         {
             var service = new EmailService();
             var to = "mwolsen123@gmail.com";
