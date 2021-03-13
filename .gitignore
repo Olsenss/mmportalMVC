@@ -4,3 +4,10 @@ _ReSharper.*
 bin
 obj
 packages
+*.config
+mmportalMVC/bin/mmportalMVC.dll
+.vs/mmportalMVC/v16/.suo
+*.config
+*.pdb
+*.cache
+mmportalMVC/obj/Debug/mmportalMVC.dll
