@@ -1,4 +1,55 @@
-﻿<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+﻿<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+    <img class="img-responsive logo" src="~/img/White_Logo Transparent.png" />
+    <div class="position-sticky pt-3">
+        <br />
+        <img class="img-circle center-block" id="profile-image" src="~/img/Dollarblob.jpg" />
+        <div class="text-center text-uppercase">
+            <p style="font-weight: bolder;">@Session["FullName"].ToString()</p>
+        </div>
+        <div class="text-center">Manager</div>
+        <ul class="nav flex-row nav-justified">
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Index", "Profile")">
+                    <span data-feather="user"></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <span data-feather="mail"></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <span data-feather="message-circle"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="position-sticky pt-3">
+        <p style="font-weight: bolder">Menu</p>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="@Url.Action("Index", "Home")">
+                    <span data-feather="monitor"></span>
+                    Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Index", "Transaction")">
+                    <span data-feather="credit-card"></span>
+                    Opret handel
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <span data-feather="bar-chart"></span>
+                    Overblik
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
     @*<div class="row dashboard">
             <div class="col-md-6">En boks her</div>
             <div class="col-md-6">en boks her </div>
@@ -27,7 +78,10 @@
     </div>
 </main>
 <style>
-    div {
+    .card-header { 
+        color: black;
+    }
+    .card-body {
         color: black;
     }
 </style>

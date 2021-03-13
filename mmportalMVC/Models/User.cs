@@ -30,5 +30,7 @@ namespace mmportalMVC.Models
         {
             return this.FirstName + " " + this.LastName;
         }
+
+        public virtual Address Address { get; set; }
     }
 }

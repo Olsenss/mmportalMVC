@@ -63,7 +63,7 @@ namespace mmportalMVC.Controllers
 
 
                 var f_password = GetMD5(password);
-                var data = _db.Users.Where(s => s.Email.Equals(email) && s.Password.Equals(f_password)).ToList();
+                 var data = _db.Users.Where(s => s.Email.Equals(email) && s.Password.Equals(f_password)).ToList();
                 if (data.Count() > 0)
                 {
                     //add session
